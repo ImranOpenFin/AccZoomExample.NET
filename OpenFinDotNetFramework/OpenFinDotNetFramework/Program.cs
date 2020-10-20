@@ -29,6 +29,7 @@ namespace OpenFinDotNetFramework
                     {
                         URL = "http://localhost:8080/index.html",
                         AutoShow = true,
+                        AcceleratorKeys = new AcceleratorKeyOptions {Zoom = true},
                         PreloadScripts = new List<PreloadScript> { new PreloadScript("http://localhost:8080/preload/preload.js", true) }
                     }
                 });
