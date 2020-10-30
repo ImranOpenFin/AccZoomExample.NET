@@ -30,7 +30,7 @@ namespace OpenFinDotNetFramework
                         URL = "http://localhost:8080/index.html",
                         AutoShow = true,
                         AcceleratorKeys = new AcceleratorKeyOptions {Zoom = true},
-                        PreloadScripts = new List<PreloadScript> { new PreloadScript("http://localhost:8080/preload/preload.js", true) }
+                        PreloadScripts = new List<PreloadScript> { new PreloadScript((@"../../preload.js"), true) }
                     }
                 });
                 app.Start();
@@ -38,7 +38,12 @@ namespace OpenFinDotNetFramework
 
             AutoResetEvent autoEvent = new AutoResetEvent(false);
             autoEvent.WaitOne();
+
+
+
             
+              
+           
         }
     }
 }
