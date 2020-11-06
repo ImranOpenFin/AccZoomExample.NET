@@ -1,12 +1,13 @@
 console.log("preload called");
 
 document.addEventListener('click', evt => {
-   if (evt.target.target === '_blank') {
+    const closestLink = evt.target.closest('a');
+    if (closestLink && closestLink.target === '_blank') {
        evt.preventDefault();
        fin.Window.create({
-           url: evt.target.href,
+           url: closestLink.href,
            name: '' + Date.now(),
-           accelerator: { zoom: true }
+           accelerator: {zoom:true},
        });
    }
 });
