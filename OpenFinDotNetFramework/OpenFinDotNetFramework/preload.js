@@ -8,6 +8,9 @@ document.addEventListener('click', evt => {
            url: closestLink.href,
            name: '' + Date.now(),
            accelerator: {zoom:true},
+           experimental: {
+               childWindows: false
+           }
        });
    }
 });
